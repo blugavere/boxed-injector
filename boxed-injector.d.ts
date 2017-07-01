@@ -8,6 +8,8 @@ export class Injector {
 
     get(name: string): any;
 
+    graph(name: string, nested:boolean): string[];
+    
     inject(Factory: any): any;
 
     middleware(name: string, method: any): any;
@@ -23,6 +25,7 @@ export namespace Injector {
         function factory(name: string, _factory: any): any;
 
         function get(name: string): any;
+        function graph(name: string, nested:boolean): string[];
 
         function inject(Factory: any): any;
 
@@ -43,6 +46,12 @@ export namespace Injector {
         }
 
         namespace get {
+            const prototype: {
+            };
+
+        }
+
+        namespace graph {
             const prototype: {
             };
 
